@@ -1,9 +1,9 @@
 #!/vendor/bin/sh
-if ! applypatch --check EMMC:/dev/block/by-name/recovery$(getprop ro.boot.slot_suffix):67108864:a2de99b2975f55edb640d3052720c0f8298c29e4; then
+if ! applypatch --check EMMC:/dev/block/by-name/recovery$(getprop ro.boot.slot_suffix):67108864:fbeffd15f22d0a228041cb988169037a2282c3fd; then
   applypatch \
           --patch /vendor/recovery-from-boot.p \
-          --source EMMC:/dev/block/by-name/boot$(getprop ro.boot.slot_suffix):33554432:5ac6db14d60abd0948cc15ab2e0d455556110fcc \
-          --target EMMC:/dev/block/by-name/recovery$(getprop ro.boot.slot_suffix):67108864:a2de99b2975f55edb640d3052720c0f8298c29e4 && \
+          --source EMMC:/dev/block/by-name/boot$(getprop ro.boot.slot_suffix):33554432:4a95350da2dc7ea83c2260699174c86e763ed7e0 \
+          --target EMMC:/dev/block/by-name/recovery$(getprop ro.boot.slot_suffix):67108864:fbeffd15f22d0a228041cb988169037a2282c3fd && \
       (log -t install_recovery "Installing new recovery image: succeeded" && setprop vendor.ota.recovery.status 200) || \
       (log -t install_recovery "Installing new recovery image: failed" && setprop vendor.ota.recovery.status 454)
 else

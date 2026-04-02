@@ -1,4 +1,4 @@
-# Unpinned blobs from a34xdxx-user 15 AP3A.240905.015.A2 A346EXXU9DYF4 release-keys
+# Unpinned blobs from a34xdxx-user 15 AP3A.240905.015.A2 A346EXXSADYG1 release-keys
 
 # Audio
 system_ext/bin/hw/android.hardware.audio.parameter_parser.service

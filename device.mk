@@ -39,7 +39,7 @@ PRODUCT_PACKAGES += \
     install-recovery.sh \
 
 PRODUCT_PACKAGES += \
-    fstab.ramplus \
+    fstab.mt6877 \
     factory_init.connectivity.common.rc \
     factory_init.connectivity.rc \
     factory_init.project.rc \
@@ -68,7 +68,7 @@ PRODUCT_PACKAGES += \
     init.recovery.samsung.rc \
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.ramplus:$(TARGET_COPY_OUT_RAMDISK)/fstab.ramplus
+    $(LOCAL_PATH)/rootdir/etc/fstab.mt6877:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6877
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

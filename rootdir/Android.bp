@@ -200,7 +200,7 @@ prebuilt_etc {
 
 // fstab
 prebuilt_etc {
-    name: "fstab.ramplus",
-    src: "etc/fstab.ramplus",
+    name: "fstab.mt6877",
+    src: "etc/fstab.mt6877",
     vendor: true,
 }

@@ -1,2 +1,9 @@
-# lineage_device_samsung_a34-e
-Lineage Device Tree (A346E)
+# Android device tree for samsung SM-A346E (a34x)
+
+```
+#
+# Copyright (C) 2025 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+```

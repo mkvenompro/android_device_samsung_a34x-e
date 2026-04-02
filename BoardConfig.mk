@@ -45,8 +45,21 @@ TARGET_KERNEL_SOURCE := kernel/samsung/a34x
 TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/kernel
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilts/dtb.img
-BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
+BOARD_MKBOOTIMG_ARGS += \
+    --dtb $(DEVICE_PATH)/prebuilt/dtb.img \
+    --ramdisk_offset 0x11088000 \
+    --os_version 15.0.0 \
+    --tags_offset 0x07c08000 \
+    --board SRPVH09A001 \
+    --header_version 2
+BOARD_ROOT_EXTRA_FOLDERS := \
+    carrier \
+    efs \
+    optics \
+    prism \
+    spu \
+    system_dlkm
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)

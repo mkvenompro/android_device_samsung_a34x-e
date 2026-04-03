@@ -7,20 +7,33 @@
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# API levels
-BOARD_API_LEVEL := 30
-PRODUCT_SHIPPING_API_LEVEL := 33
+# Enable project quotas and casefolding for emulated storage without sdcardfs
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
+# Enforce generic ramdisk allow list
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
+
+# Non_ab_device
+$(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd
 
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-service
+    android.hardware.gatekeeper@1.0-impl
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
+
+# API levels
+BOARD_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := 33
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
@@ -73,6 +86,8 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
+
+LOCAL_NOTICE_FILE := $(LOCAL_PATH)/etc/NOTICE.xml.gz
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/a34x/a34x-vendor.mk)

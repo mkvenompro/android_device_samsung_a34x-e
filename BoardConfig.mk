@@ -83,10 +83,13 @@ BOARD_SUPER_PARTITION_SIZE := 9126805504 # TODO: Fix hardcoded value
 BOARD_SUPER_PARTITION_GROUPS := samsung_dynamic_partitions
 BOARD_SAMSUNG_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor system_dlkm vendor_dlkm odm_dlkm
 BOARD_SAMSUNG_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
+
 BOARD_USES_VENDOR_RAMDISK := true
 BOARD_BUILD_VENDOR_RAMDISK_IMAGE := true
 BOARD_VENDOR_RAMDISK_IMAGE := $(PRODUCT_OUT)/vendor_ramdisk.img
 BOARD_VENDOR_BOOT_IMAGE := $(PRODUCT_OUT)/vendor_boot.img
+
+BOARD_USES_SYSTEM_DLKM_PARTITION := true
 BOARD_USES_VENDOR_DLKM_PARTITION := true
 BOARD_USES_METADATA_PARTITION := true
 
@@ -150,6 +153,12 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     hardware/samsung/vintf/samsung_framework_compatibility_matrix.xml \
     hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml
+
+# Modules
+BOARD_RECOVERY_KERNEL_MODULES += $(wildcard $(DEVICE_PATH)/rootdir/modules/recovery/*.ko)
+BOARD_VENDOR_KERNEL_MODULES += $(wildcard $(DEVICE_PATH)/rootdir/modules/vendor_dlkm/*.ko)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES += $(wildcard $(DEVICE_PATH)/rootdir/modules/vendor_boot/*.ko)
+BOARD_SYSTEM_DLKM_KERNEL_MODULES += $(wildcard $(DEVICE_PATH)/rootdir/modules/system_dlkm/*.ko)
 
 # Inherit the proprietary files
 include vendor/samsung/a34x/BoardConfigVendor.mk

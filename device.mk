@@ -32,7 +32,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-service
 
 # API levels
-BOARD_API_LEVEL := 30
 PRODUCT_SHIPPING_API_LEVEL := 33
 
 # Overlays

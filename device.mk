@@ -52,7 +52,7 @@ PRODUCT_PACKAGES += \
     install-recovery.sh \
 
 PRODUCT_PACKAGES += \
-    fstab.mt6877 \
+    fstab.ramplus \
     factory_init.connectivity.common.rc \
     factory_init.connectivity.rc \
     factory_init.project.rc \
@@ -82,8 +82,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6877:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6877
-
-LOCAL_NOTICE_FILE := $(LOCAL_PATH)/etc/NOTICE.xml.gz
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

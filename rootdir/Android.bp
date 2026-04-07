@@ -197,10 +197,3 @@ prebuilt_etc {
     sub_dir: "init/hw",
     vendor: true,
 }
-
-// fstab
-prebuilt_etc {
-    name: "fstab.mt6877",
-    src: "etc/fstab.mt6877",
-    vendor: true,
-}

@@ -58,7 +58,7 @@ BOARD_PREBUILT_RECOVERY_DTB := $(DEVICE_PATH)/prebuilts/dtb.img
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
 BOARD_PREBUILT_RECOVERY_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/recovery_dtbo.img
 BOARD_RECOVERY_MKBOOTIMG_ARGS := \
-    --dtb $(DEVICE_PATH)/prebuilts/dtb.img \
+    --dtb=$(DEVICE_PATH)/prebuilts/dtb.img \
     --ramdisk_offset=0x11088000 \
     --second_offset=0xbff88000 \
     --dtb_offset=0x07c08000 \

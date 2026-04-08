@@ -64,7 +64,7 @@ BOARD_RECOVERY_MKBOOTIMG_ARGS := \
     --os_version=15.0.0 \
     --tags_offset=0x07c08000 \
     --board=SRPVL02A010 \
-    --header_version=2
+    --header_version=2 \
     --dtb=$(BOARD_PREBUILT_RECOVERY_DTB)
 BOARD_ROOT_EXTRA_FOLDERS := \
     carrier \

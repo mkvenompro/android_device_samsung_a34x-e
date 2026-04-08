@@ -61,9 +61,11 @@ BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
 BOARD_RECOVERY_MKBOOTIMG_ARGS := \
     --dtb $(DEVICE_PATH)/prebuilts/dtb.img \
     --ramdisk_offset=0x11088000 \
+    --second_offset=0xbff88000 \
+    --dtb_offset=0x07c08000 \
     --os_version=15.0.0 \
     --tags_offset=0x07c08000 \
-    --board=SRPVH09A001 \
+    --board=SRPVL02A010 \
     --header_version=2
 BOARD_ROOT_EXTRA_FOLDERS := \
     carrier \

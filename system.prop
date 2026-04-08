@@ -114,7 +114,6 @@ ro.dalvik.vm.native.bridge=0
 ro.iorapd.enable=false
 ro.kernel.qemu=0
 ro.kernel.zio=38,108,105,16
-ro.llndk.api_level=202404
 ro.logd.auditd.events=false
 ro.logd.auditd.main=false
 ro.mediatek.version.branch=alps-mp-v0.mssi1.tc10sp

@@ -54,7 +54,7 @@ TARGET_KERNEL_SOURCE := kernel/samsung/a34x
 TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/kernel
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilts/dtb.img
-BOARD_PREBUILT_RECOVERY_DTB := $(DEVICE_PATH)/prebuilts/dtb.img
+BOARD_PREBUILT_RECOVERY_DTB := $(DEVICE_PATH)/prebuilts/recovery_dtb.img
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
 BOARD_PREBUILT_RECOVERY_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/recovery_dtbo.img
 BOARD_RECOVERY_MKBOOTIMG_ARGS := \
@@ -65,6 +65,7 @@ BOARD_RECOVERY_MKBOOTIMG_ARGS := \
     --tags_offset=0x07c08000 \
     --board=SRPVL02A010 \
     --header_version=2
+    --dtb=$(BOARD_PREBUILT_RECOVERY_DTB)
 BOARD_ROOT_EXTRA_FOLDERS := \
     carrier \
     efs \

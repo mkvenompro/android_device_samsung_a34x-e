@@ -58,7 +58,6 @@ BOARD_PREBUILT_RECOVERY_DTB := $(DEVICE_PATH)/prebuilts/dtb.img
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
 BOARD_PREBUILT_RECOVERY_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/recovery_dtbo.img
 BOARD_RECOVERY_MKBOOTIMG_ARGS := \
-    --dtb=$(DEVICE_PATH)/prebuilts/dtb.img \
     --ramdisk_offset=0x11088000 \
     --second_offset=0xbff88000 \
     --dtb_offset=0x07c08000 \
@@ -130,7 +129,6 @@ BOARD_USES_FULL_RECOVERY_IMAGE := true
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
-BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
 
 # Security patch level

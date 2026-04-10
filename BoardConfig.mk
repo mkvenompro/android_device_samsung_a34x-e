@@ -161,6 +161,8 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 # Sepolicy
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 include device/lineage/sepolicy/libperfmgr/sepolicy.mk
+BOARD_SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
+    device/samsung/a34x/sepolicy/system
 
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 

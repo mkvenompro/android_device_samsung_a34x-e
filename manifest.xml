@@ -9,30 +9,6 @@
         <fqname>IGnss/default</fqname>
     </hal>
     <hal format="aidl">
-        <name>android.hardware.radio.data</name>
-    </hal>
-    <hal format="aidl">
-        <name>android.hardware.radio.ims</name>
-    </hal>
-    <hal format="aidl">
-        <name>android.hardware.radio.messaging</name>
-    </hal>
-    <hal format="aidl">
-        <name>android.hardware.radio.modem</name>
-    </hal>
-    <hal format="aidl">
-        <name>android.hardware.radio.network</name>
-    </hal>
-    <hal format="aidl">
-        <name>android.hardware.radio.sap</name>
-    </hal>
-    <hal format="aidl">
-        <name>android.hardware.radio.sim</name>
-    </hal>
-    <hal format="aidl">
-        <name>android.hardware.radio.voice</name>
-    </hal>
-    <hal format="aidl">
         <name>android.hardware.security.keymint</name>
         <fqname>IKeyMintDevice/default</fqname>
     </hal>

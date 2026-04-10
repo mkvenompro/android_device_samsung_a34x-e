@@ -81,6 +81,7 @@ BOARD_ROOT_EXTRA_FOLDERS := \
     prism \
     spu \
     system_dlkm
+BOARD_SYSTEM_EXTRA_FOLDERS := carrier
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)

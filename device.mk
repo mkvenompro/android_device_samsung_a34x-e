@@ -76,6 +76,61 @@ PRODUCT_PACKAGES += \
     init.recovery.mt6877.rc \
     init.recovery.samsung.rc \
 
+# MediaTek HALs
+PRODUCT_PACKAGES += \
+    gatekeeper.mt6877 \
+    lights.mt6877 \
+    power.mt6877 \
+    sensors.mt6877 \
+    android.hardware.gatekeeper@1.0-service \
+    android.hardware.lights-service.samsung \
+    android.hardware.power-service.mediatek \
+    android.hardware.sensors-service.multihal
+
+# Samsung-specific HALs
+PRODUCT_PACKAGES += \
+    vendor.samsung.hardware.camera.provider-service_64 \
+    vendor.samsung.hardware.gnss-service \
+    vendor.samsung.hardware.health-service \
+    vendor.samsung.hardware.thermal-service \
+    vendor.samsung.hardware.vibrator-service
+
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    ims_ext_common.xml \
+    extphonelib \
+    extphonelib-product \
+    extphonelib.xml \
+    extphonelib_product.xml \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
+# Display
+PRODUCT_PACKAGES += \
+    hwcomposer.mt6877 \
+    gralloc.mt6877 \
+    libvulkan
+
+# Media
+PRODUCT_PACKAGES += \
+    libcodec2_soft_common \
+    libstagefright_softomx \
+    media_codecs.xml \
+    media_codecs_performance.xml \
+    media_profiles_V1_0.xml
+
+# Audio
+PRODUCT_PACKAGES += \
+    audio.primary.mt6877 \
+    audio_policy.stub \
+    libaudiohal
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6877:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6877 \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6877:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6877
@@ -85,9 +140,24 @@ LOCAL_NOTICE_FILE := $(LOCAL_PATH)/NOTICE.xml.gz
 PRODUCT_COPY_FILES += \
     device/samsung/a34x/rootdir/carrier/.keep:system/carrier/.keep
 
-# Soong namespaces
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
+    frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
+    frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
+    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
+    frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml \
+    frameworks/native/data/etc/android.hardware.sensor.compass.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.compass.xml \
+    frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
+    frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
+
+PRODUCT_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
+
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(DEVICE_PATH) \
+    hardware/samsung/aidl \
+    hardware/mediatek
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/a34x/a34x-vendor.mk)

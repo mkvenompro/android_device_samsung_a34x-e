@@ -9,9 +9,6 @@
         <fqname>IGnss/default</fqname>
     </hal>
     <hal format="aidl">
-        <name>android.hardware.radio.config</name>
-    </hal>
-    <hal format="aidl">
         <name>android.hardware.radio.data</name>
     </hal>
     <hal format="aidl">

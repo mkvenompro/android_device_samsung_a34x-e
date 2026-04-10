@@ -1,0 +1,2 @@
+[AID_VENDOR_SPAY]
+value: 2906

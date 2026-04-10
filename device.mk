@@ -82,6 +82,9 @@ PRODUCT_COPY_FILES += \
 
 LOCAL_NOTICE_FILE := $(LOCAL_PATH)/NOTICE.xml.gz
 
+PRODUCT_COPY_FILES += \
+    device/samsung/a34x/rootdir/carrier/.keep:system/carrier/.keep
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)

@@ -76,13 +76,11 @@ BOARD_RECOVERY_MKBOOTIMG_ARGS := \
     --header_version=2 \
     --dtb=$(BOARD_PREBUILT_RECOVERY_DTB)
 BOARD_ROOT_EXTRA_FOLDERS := \
-    carrier \
     efs \
     optics \
     prism \
     spu \
     system_dlkm
-BOARD_SYSTEM_EXTRA_FOLDERS := carrier
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)

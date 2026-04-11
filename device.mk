@@ -22,16 +22,8 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service \
     android.hardware.gatekeeper@1.0-impl
 
-# Health
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-impl.recovery \
-    android.hardware.health@2.1-service
-
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 33
-
-PRODUCT_PACKAGES_OVERLAYS := $(filter-out device/generic/goldfish/overlay device/google/cuttlefish/overlay, $(PRODUCT_PACKAGES_OVERLAYS))
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *

@@ -7,7 +7,6 @@
 DEVICE_PATH := device/samsung/a34x
 
 AB_OTA_UPDATER := false
-TARGET_USES_MINI_GKI := true
 
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
@@ -97,11 +96,7 @@ BOARD_SUPER_PARTITION_GROUPS := samsung_dynamic_partitions
 BOARD_SAMSUNG_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor system_dlkm vendor_dlkm odm_dlkm
 BOARD_SAMSUNG_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
 
-BOARD_USES_VENDOR_RAMDISK := true
 BOARD_BUILD_VENDOR_RAMDISK_IMAGE := true
-BOARD_VENDOR_RAMDISK_IMAGE := $(PRODUCT_OUT)/vendor_ramdisk.img
-BOARD_VENDOR_BOOT_IMAGE := $(PRODUCT_OUT)/vendor_boot.img
-
 BOARD_USES_SYSTEM_DLKM_PARTITION := true
 BOARD_USES_VENDOR_DLKM_PARTITION := true
 BOARD_USES_METADATA_PARTITION := true
@@ -172,7 +167,6 @@ BOARD_VNDK_VERSION := current
 
 # Sepolicy
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
-include device/lineage/sepolicy/libperfmgr/sepolicy.mk
 BOARD_SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
     device/samsung/a34x/sepolicy/system
 

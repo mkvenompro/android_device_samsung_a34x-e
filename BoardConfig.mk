@@ -182,6 +182,3 @@ BOARD_RECOVERY_KERNEL_MODULES += $(wildcard $(DEVICE_PATH)/rootdir/modules/recov
 BOARD_VENDOR_KERNEL_MODULES += $(wildcard $(DEVICE_PATH)/rootdir/modules/vendor_dlkm/*.ko)
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES += $(wildcard $(DEVICE_PATH)/rootdir/modules/vendor_boot/*.ko)
 BOARD_SYSTEM_DLKM_KERNEL_MODULES += $(wildcard $(DEVICE_PATH)/rootdir/modules/system_dlkm/*.ko)
-
-# Inherit the proprietary files
-include vendor/samsung/a34x/BoardConfigVendor.mk

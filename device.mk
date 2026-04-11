@@ -78,6 +78,110 @@ PRODUCT_PACKAGES += \
     init.recovery.mt6877.rc \
     init.recovery.samsung.rc \
 
+# Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio.service-aidl.mediatek \
+    android.hardware.audio.parameter_parser.service
+
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth-service-mediatek
+
+# Camera
+PRODUCT_PACKAGES += \
+    vendor.samsung.hardware.camera.provider-service_64
+
+# Display
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator-V2-service-mediatek \
+    android.hardware.graphics.composer@3.3-service \
+    android.hardware.memtrack-service.mediatek \
+    vendor.mediatek.hardware.mms-service \
+    vendor.mediatek.hardware.pq_aidl-service \
+    hwcomposer.mt6877 \
+    gralloc.mt6877 
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm-service.clearkey \
+    com.google.android.widevine.nonupdatable
+
+# Dumpstate
+PRODUCT_PACKAGES += \
+    android.hardware.dumpstate-service
+
+# Media
+PRODUCT_PACKAGES += \
+    android.hardware.media.c2-mediatek \
+    android.hardware.media.c2-mediatek-64b \
+    android.hardware.media.omx@1.0-service \
+    samsung.software.media.c2@1.0-service
+
+# Security / KeyMint
+PRODUCT_PACKAGES += \
+    android.hardware.security.keymint-service \
+    vendor.samsung.hardware.security.drk@2.0-service \
+    vendor.samsung.hardware.security.engmode@1.0-service \
+    vendor.samsung.hardware.security.fkeymaster-service \
+    vendor.samsung.hardware.security.hdcp.wifidisplay-service \
+    vendor.samsung.hardware.security.proca@2.0-service \
+    vendor.samsung.hardware.security.skpm-service \
+    vendor.samsung.hardware.security.vaultkeeper@2.0-service \
+    vendor.samsung.hardware.security.widevine.keyprov-service \
+    vendor.samsung.hardware.security.wsm-service
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb-aidl-service.mediatekv1.0
+
+# Wi-Fi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi-service-lazy \
+    hostapd \
+    wpa_supplicant \
+    vendor.samsung.hardware.wifi-service
+
+# Biometrics
+PRODUCT_PACKAGES += \
+    vendor.samsung.hardware.authfw-service \
+    vendor.samsung.hardware.biometrics.face-service \
+    vendor.samsung.hardware.biometrics.fingerprint-service
+
+# Misc Samsung/MTK services
+PRODUCT_PACKAGES += \
+    macloader \
+    mfgloader \
+    secaudiohalaidl \
+    tetheroffloadservice \
+    vendor.mediatek.hardware.aee@1.1-service \
+    vendor.mediatek.hardware.gpuserv-service \
+    vendor.mediatek.hardware.mmagent-service \
+    vendor.mediatek.hardware.mmlpq@V1-service \
+    vendor.mediatek.hardware.nvram-service \
+    vendor.mediatek.hardware.nwk_opt@1.0-service \
+    vendor.samsung.hardware.hyper-service \
+    vendor.samsung.hardware.snap-service \
+    vendor.samsung.hardware.sysinput-service \
+    vendor.samsung.hardware.tlc.hdm@1.1-service \
+    vendor.samsung.hardware.tlc.iccc-service \
+    vendor.samsung.hardware.tlc.kg-service \
+    vendor.samsung.hardware.tlc.mpos_tui@1.0-service \
+    vendor.samsung.hardware.tlc.payment@1.0-service
+
+# APEXes
+PRODUCT_PACKAGES += \
+    com.android.hardware.cas \
+    com.samsung.android.authfw.ta.preload \
+    com.samsung.android.biometrics.face.signed \
+    com.samsung.android.biometrics.fingerprint.signed \
+    com.samsung.android.camera.unihal.signed \
+    com.samsung.android.vital.signed
+
+# Network stack overlays
+PRODUCT_PACKAGES += \
+    NetworkStackResOverlay \
+    TetheringResOverlay
+
 # MediaTek HALs
 PRODUCT_PACKAGES += \
     gatekeeper.mt6877 \
@@ -99,11 +203,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
-
-# Display
-PRODUCT_PACKAGES += \
-    hwcomposer.mt6877 \
-    gralloc.mt6877 
 
 # Media
 PRODUCT_PACKAGES += \

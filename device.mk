@@ -97,27 +97,13 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.thermal-service \
     vendor.samsung.hardware.vibrator-service
 
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml \
-    extphonelib \
-    extphonelib-product \
-    extphonelib.xml \
-    extphonelib_product.xml \
-    qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
-    qti-telephony-utils \
-    qti_telephony_utils.xml \
-    telephony-ext
-
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
 # Display
 PRODUCT_PACKAGES += \
     hwcomposer.mt6877 \
-    gralloc.mt6877 \
-    libvulkan
+    gralloc.mt6877 
 
 # Media
 PRODUCT_PACKAGES += \

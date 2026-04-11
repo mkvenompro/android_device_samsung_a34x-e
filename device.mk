@@ -231,12 +231,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
-#PRODUCT_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
-
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \
     hardware/samsung/aidl \
     hardware/mediatek
-
-# Inherit the proprietary files
-$(call inherit-product, vendor/samsung/a34x/a34x-vendor.mk)

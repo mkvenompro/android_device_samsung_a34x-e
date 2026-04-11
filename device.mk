@@ -31,6 +31,8 @@ PRODUCT_PACKAGES += \
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 33
 
+PRODUCT_PACKAGES_EXCLUDED += goldfish_overlay_connectivity_gsi
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 

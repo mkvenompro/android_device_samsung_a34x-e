@@ -31,11 +31,7 @@ PRODUCT_PACKAGES += \
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 33
 
-PRODUCT_PACKAGES_EXCLUDED += \
-    goldfish_overlay_connectivity_gsi \
-    cuttlefish_overlay_frameworks_base_core \
-    cuttlefish_overlay_uwb_gsi \
-    CuttlefishWifiOverlay
+PRODUCT_PACKAGES_OVERLAYS := $(filter-out device/generic/goldfish/overlay device/google/cuttlefish/overlay, $(PRODUCT_PACKAGES_OVERLAYS))
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *

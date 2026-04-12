@@ -1,0 +1,20 @@
+Signature-Version: 1.0
+Created-By: 2.0 (Samsung SignApk)
+SHA-256-Digest-Manifest: x3Hp8U9nE5gMA+1x1c/zu7GyWSRgzPMmX2Ao3Inv1EM=
+X-Android-APK-Signed: 2, 3
+
+Name: AndroidManifest.xml
+SHA-256-Digest: sL3Lq6JUOJ6EQZqrCVKpBhTipwlL4ZXWE7OLp5wnlJM=
+
+Name: SEC-INF/buildConfirm.crt
+SHA-256-Digest: P3ynqIdbDmwF1PsNloTMDkK1dQ1IUV/iAEjaKUKMbUg=
+
+Name: SEC-INF/buildinfo.xml
+SHA-256-Digest: ZXFvnpLwEC370LMDf0cHVdqT+NG0FIBTzQQZBz6c6Xs=
+
+Name: res/xml/power_profile.xml
+SHA-256-Digest: i+Ji1nFKZmAmOJEt/llLDW40GO6Wrx9jesS34sc+j78=
+
+Name: resources.arsc
+SHA-256-Digest: 0DQAlRQAkS1QZGv3tgIYg3EcCINVW5GVhro6UtYAEl8=
+

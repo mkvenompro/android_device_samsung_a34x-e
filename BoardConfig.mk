@@ -220,10 +220,10 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
 
 # odm
 ODM_MANIFEST_SKUS := dsds qsqs ss tsts
-ODM_MANIFEST_DSDS_FILES := $(LOCAL_PATH)/odm/manifest_dsds.xml
-ODM_MANIFEST_QSQS_FILES := $(LOCAL_PATH)/odm/manifest_qsqs.xml
-ODM_MANIFEST_SS_FILES := $(LOCAL_PATH)/odm/manifest_ss.xml
-ODM_MANIFEST_TSTS_FILES := $(LOCAL_PATH)/odm/manifest_tsts.xml
+ODM_MANIFEST_DSDS_FILES := $(DEVICE_PATH)/odm/manifest_dsds.xml
+ODM_MANIFEST_QSQS_FILES := $(DEVICE_PATH)/odm/manifest_qsqs.xml
+ODM_MANIFEST_SS_FILES := $(DEVICE_PATH)/odm/manifest_ss.xml
+ODM_MANIFEST_TSTS_FILES := $(DEVICE_PATH)/odm/manifest_tsts.xml
 
 # Modules
 BOARD_RECOVERY_KERNEL_MODULES += $(wildcard $(DEVICE_PATH)/rootdir/modules/recovery/*.ko)

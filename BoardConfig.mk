@@ -167,6 +167,9 @@ BOARD_VNDK_VERSION := current
 # Sepolicy
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 BOARD_SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
+    hardware/mediatek/sepolicy/bsp/vendor \
+    hardware/samsung/sepolicy/common \
+    hardware/samsung/sepolicy/mtk \
     device/samsung/a34x/sepolicy/vendor
 
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs

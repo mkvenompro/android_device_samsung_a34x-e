@@ -196,12 +196,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display/cust_color.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cust_color.xml \
     $(LOCAL_PATH)/configs/display/pq_flag.xml:$(TARGET_COPY_OUT_VENDOR)/etc/pq_flag.xml \
-    $(LOCAL_PATH)/configs/display/displayconfig/display_id_4627039422300187648.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4627039422300187648.xml \
-    $(LOCAL_PATH)/configs/display/gralloc/cam.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/cam.xml \
-    $(LOCAL_PATH)/configs/display/gralloc/dpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/dpu.xml \
-    $(LOCAL_PATH)/configs/display/gralloc/dpu_aeu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/dpu_aeu.xml \
-    $(LOCAL_PATH)/configs/display/gralloc/gpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/gpu.xml \
-    $(LOCAL_PATH)/configs/display/gralloc/vpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/vpu.xml
+    $(LOCAL_PATH)/configs/display/display_id_4627039422300187648.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4627039422300187648.xml \
+    $(LOCAL_PATH)/configs/display/cam.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/cam.xml \
+    $(LOCAL_PATH)/configs/display/dpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/dpu.xml \
+    $(LOCAL_PATH)/configs/display/dpu_aeu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/dpu_aeu.xml \
+    $(LOCAL_PATH)/configs/display/gpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/gpu.xml \
+    $(LOCAL_PATH)/configs/display/vpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/vpu.xml
 
 # DRM
 PRODUCT_PACKAGES += \

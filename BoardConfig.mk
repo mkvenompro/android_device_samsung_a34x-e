@@ -164,6 +164,9 @@ BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX_LOCATION := 3
 
 BOARD_VNDK_VERSION := current
 
+# NFC
+BOARD_NFC_CHIPSET := sec_s3nrn4v
+
 # Sepolicy
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 BOARD_SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \

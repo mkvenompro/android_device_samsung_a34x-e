@@ -70,6 +70,37 @@ PRODUCT_PACKAGES += \
     init.recovery.mt6877.rc \
     init.recovery.samsung.rc \
 
+# Firmware
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/firmware/nfc/sec_s3nrn4v_firmware.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/nfc/sec_s3nrn4v_firmware.bin \
+    $(LOCAL_PATH)/firmware/tsp_goodix/gt9895_a34x.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tsp_goodix/gt9895_a34x.bin \
+    $(LOCAL_PATH)/firmware/BT_FW.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/BT_FW.cfg \
+    $(LOCAL_PATH)/firmware/SetMultiCal.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/SetMultiCal.bin \
+    $(LOCAL_PATH)/firmware/SoundBoosterParam.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/SoundBoosterParam.bin \
+    $(LOCAL_PATH)/firmware/WIFI:$(TARGET_COPY_OUT_VENDOR)/firmware/WIFI \
+    $(LOCAL_PATH)/firmware/WIFI_RAM_CODE_soc5_0_1_1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/WIFI_RAM_CODE_soc5_0_1_1.bin \
+    $(LOCAL_PATH)/firmware/WIFI_RAM_CODE_soc5_0_1c_1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/WIFI_RAM_CODE_soc5_0_1c_1.bin \
+    $(LOCAL_PATH)/firmware/connfem.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/connfem.cfg \
+    $(LOCAL_PATH)/firmware/conninfra.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/conninfra.cfg \
+    $(LOCAL_PATH)/firmware/fm_cust.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/fm_cust.cfg \
+    $(LOCAL_PATH)/firmware/gt9896s_cfg_6877v01.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/gt9896s_cfg_6877v01.bin \
+    $(LOCAL_PATH)/firmware/gt9896s_cfg_6877v02.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/gt9896s_cfg_6877v02.bin \
+    $(LOCAL_PATH)/firmware/gt9896s_firmware_6877v01.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/gt9896s_firmware_6877v01.bin \
+    $(LOCAL_PATH)/firmware/gt9896s_firmware_6877v02.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/gt9896s_firmware_6877v02.bin \
+    $(LOCAL_PATH)/firmware/lib3a.ccu:$(TARGET_COPY_OUT_VENDOR)/firmware/lib3a.ccu \
+    $(LOCAL_PATH)/firmware/mt6635_fm_v1_coeff.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mt6635_fm_v1_coeff.bin \
+    $(LOCAL_PATH)/firmware/mt6635_fm_v1_patch.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mt6635_fm_v1_patch.bin \
+    $(LOCAL_PATH)/firmware/remoteproc_scp:$(TARGET_COPY_OUT_VENDOR)/firmware/remoteproc_scp \
+    $(LOCAL_PATH)/firmware/soc5_0_ram_bt_1_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc5_0_ram_bt_1_1_hdr.bin \
+    $(LOCAL_PATH)/firmware/soc5_0_ram_bt_1c_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc5_0_ram_bt_1c_1_hdr.bin \
+    $(LOCAL_PATH)/firmware/soc5_0_ram_mcu_1_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc5_0_ram_mcu_1_1_hdr.bin \
+    $(LOCAL_PATH)/firmware/soc5_0_ram_mcu_1c_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc5_0_ram_mcu_1c_1_hdr.bin \
+    $(LOCAL_PATH)/firmware/soc5_0_ram_wmmcu_1_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc5_0_ram_wmmcu_1_1_hdr.bin \
+    $(LOCAL_PATH)/firmware/soc5_0_ram_wmmcu_1c_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc5_0_ram_wmmcu_1c_1_hdr.bin \
+    $(LOCAL_PATH)/firmware/tfa98xx.cnt:$(TARGET_COPY_OUT_VENDOR)/firmware/tfa98xx.cnt \
+    $(LOCAL_PATH)/firmware/txpowerctrl.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/txpowerctrl.cfg \
+    $(LOCAL_PATH)/firmware/wifi.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi.cfg    
+    
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service-aidl.mediatek \
@@ -101,6 +132,17 @@ PRODUCT_PACKAGES += \
 # Dumpstate
 PRODUCT_PACKAGES += \
     android.hardware.dumpstate-service
+    
+# IMS
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    ims_ext_common.xml
+
+# Samsung IMS
+PRODUCT_PACKAGES += \
+    volte_clientapi_ua \
+    volte_rcs_ua \
+    rcs_volte_stack    
 
 # Media
 PRODUCT_PACKAGES += \
@@ -254,7 +296,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
-    frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.uicc.xml
+    frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.uicc.xml \
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml
 
 # Audio
 PRODUCT_COPY_FILES += \

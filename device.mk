@@ -225,10 +225,6 @@ PRODUCT_PACKAGES += \
     volte_rcs_ua \
     rcs_volte_stack    
     
-# keylayout
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/keylayout/Generic.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/Generic.kl
-
 # Media
 PRODUCT_PACKAGES += \
     android.hardware.media.c2-mediatek \

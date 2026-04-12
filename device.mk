@@ -34,6 +34,15 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Product characteristics
 PRODUCT_CHARACTERISTICS := phone
 
+# APEXes
+PRODUCT_PACKAGES += \
+    com.android.hardware.cas \
+    com.samsung.android.authfw.ta.preload \
+    com.samsung.android.biometrics.face.signed \
+    com.samsung.android.biometrics.fingerprint.signed \
+    com.samsung.android.camera.unihal.signed \
+    com.samsung.android.vital.signed
+
 # Rootdir
 PRODUCT_PACKAGES += \
     hdm_status.sh \
@@ -104,203 +113,11 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service-aidl.mediatek \
-    android.hardware.audio.parameter_parser.service
-
-# Bluetooth
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth-service-mediatek
-
-# Camera
-PRODUCT_PACKAGES += \
-    vendor.samsung.hardware.camera.provider-service_64
-
-# Display
-PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator-V2-service-mediatek \
-    android.hardware.graphics.composer@3.3-service \
-    android.hardware.memtrack-service.mediatek \
-    vendor.mediatek.hardware.mms-service \
-    vendor.mediatek.hardware.pq_aidl-service \
-    hwcomposer.mt6877 \
-    gralloc.mt6877 
-
-# DRM
-PRODUCT_PACKAGES += \
-    android.hardware.drm-service.clearkey \
-    com.google.android.widevine.nonupdatable
-
-# Dumpstate
-PRODUCT_PACKAGES += \
-    android.hardware.dumpstate-service
-    
-# IMS
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml
-
-# Samsung IMS
-PRODUCT_PACKAGES += \
-    volte_clientapi_ua \
-    volte_rcs_ua \
-    rcs_volte_stack    
-
-# Media
-PRODUCT_PACKAGES += \
-    android.hardware.media.c2-mediatek \
-    android.hardware.media.c2-mediatek-64b \
-    android.hardware.media.omx@1.0-service \
-    samsung.software.media.c2@1.0-service
-
-# NFC
-PRODUCT_PACKAGES += \
-    android.hardware.nfc-service.samsung \
-    com.android.nfc_extras \
-    NfcNci \
-    Tag
-
-# Security / KeyMint
-PRODUCT_PACKAGES += \
-    android.hardware.security.keymint-service \
-    vendor.samsung.hardware.security.drk@2.0-service \
-    vendor.samsung.hardware.security.engmode@1.0-service \
-    vendor.samsung.hardware.security.fkeymaster-service \
-    vendor.samsung.hardware.security.hdcp.wifidisplay-service \
-    vendor.samsung.hardware.security.proca@2.0-service \
-    vendor.samsung.hardware.security.skpm-service \
-    vendor.samsung.hardware.security.vaultkeeper@2.0-service \
-    vendor.samsung.hardware.security.widevine.keyprov-service \
-    vendor.samsung.hardware.security.wsm-service
-
-# USB
-PRODUCT_PACKAGES += \
-    android.hardware.usb-aidl-service.mediatekv1.0
-
-# Wi-Fi
-PRODUCT_PACKAGES += \
-    android.hardware.wifi-service-lazy \
-    hostapd \
-    wpa_supplicant \
-    vendor.samsung.hardware.wifi-service
-
-# Biometrics
-PRODUCT_PACKAGES += \
-    vendor.samsung.hardware.authfw-service \
-    vendor.samsung.hardware.biometrics.face-service \
-    vendor.samsung.hardware.biometrics.fingerprint-service
-
-# Misc Samsung/MTK services
-PRODUCT_PACKAGES += \
-    macloader \
-    mfgloader \
-    secaudiohalaidl \
-    tetheroffloadservice \
-    vendor.mediatek.hardware.aee@1.1-service \
-    vendor.mediatek.hardware.gpuserv-service \
-    vendor.mediatek.hardware.mmagent-service \
-    vendor.mediatek.hardware.mmlpq@V1-service \
-    vendor.mediatek.hardware.nvram-service \
-    vendor.mediatek.hardware.nwk_opt@1.0-service \
-    vendor.samsung.hardware.hyper-service \
-    vendor.samsung.hardware.snap-service \
-    vendor.samsung.hardware.sysinput-service \
-    vendor.samsung.hardware.tlc.hdm@1.1-service \
-    vendor.samsung.hardware.tlc.iccc-service \
-    vendor.samsung.hardware.tlc.kg-service \
-    vendor.samsung.hardware.tlc.mpos_tui@1.0-service \
-    vendor.samsung.hardware.tlc.payment@1.0-service
-
-# APEXes
-PRODUCT_PACKAGES += \
-    com.android.hardware.cas \
-    com.samsung.android.authfw.ta.preload \
-    com.samsung.android.biometrics.face.signed \
-    com.samsung.android.biometrics.fingerprint.signed \
-    com.samsung.android.camera.unihal.signed \
-    com.samsung.android.vital.signed
-
-# Network stack overlays
-PRODUCT_PACKAGES += \
-    NetworkStackResOverlay \
-    TetheringResOverlay
-
-# MediaTek HALs
-PRODUCT_PACKAGES += \
-    gatekeeper.mt6877 \
-    lights.mt6877 \
-    power.mt6877 \
-    sensors.mt6877 \
-    android.hardware.gatekeeper@1.0-service \
-    android.hardware.lights-service.samsung \
-    android.hardware.power-service.mediatek \
-    android.hardware.sensors-service.multihal
-
-# Samsung-specific HALs
-PRODUCT_PACKAGES += \
-    vendor.samsung.hardware.camera.provider-service_64 \
-    vendor.samsung.hardware.gnss-service \
-    vendor.samsung.hardware.health-service \
-    vendor.samsung.hardware.thermal-service \
-    vendor.samsung.hardware.vibrator-service
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
-
-# Media
-PRODUCT_PACKAGES += \
-    libcodec2_soft_common \
-    libstagefright_softomx \
-    media_codecs.xml \
-    media_codecs_performance.xml \
-    media_profiles_V1_0.xml
-
-# Audio
-PRODUCT_PACKAGES += \
+    android.hardware.audio.parameter_parser.service \
     audio.primary.mt6877 \
     audio_policy.stub \
     libaudiohal
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6877:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6877 \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6877:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6877
-
-LOCAL_NOTICE_FILE := $(LOCAL_PATH)/NOTICE.xml.gz
-
-PRODUCT_COPY_FILES += \
-    device/samsung/a34x/rootdir/carrier/.keep:system/carrier/.keep
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
-    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
-    frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
-    frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
-    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
-    frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml \
-    frameworks/native/data/etc/android.hardware.sensor.compass.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.compass.xml \
-    frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
-    frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml \
-    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.biometrics.face.xml \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
-    frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
-    frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
-    frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml \
-    frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.gyroscope.xml \
-    frameworks/native/data/etc/android.hardware.sensor.light.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.light.xml \
-    frameworks/native/data/etc/android.hardware.sensor.proximity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.proximity.xml \
-    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
-    frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml \
-    frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml \
-    frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
-    frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
-    frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.uicc.xml \
-    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml
-
-# Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/system/audio_effects.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_effects.conf \
     $(LOCAL_PATH)/configs/audio/system/audio_effects_common.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_effects_common.conf \
@@ -352,17 +169,74 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/vendor/usb_audio_accessory_only_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_accessory_only_policy_configuration.xml \
     $(LOCAL_PATH)/configs/audio/vendor/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
-# Seccomp
+# Biometrics
+PRODUCT_PACKAGES += \
+    vendor.samsung.hardware.authfw-service \
+    vendor.samsung.hardware.biometrics.face-service \
+    vendor.samsung.hardware.biometrics.fingerprint-service
+
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth-service-mediatek
+
+# Camera
+PRODUCT_PACKAGES += \
+    vendor.samsung.hardware.camera.provider-service_64
+
+# Display
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator-V2-service-mediatek \
+    android.hardware.graphics.composer@3.3-service \
+    android.hardware.memtrack-service.mediatek \
+    vendor.mediatek.hardware.mms-service \
+    vendor.mediatek.hardware.pq_aidl-service \
+    hwcomposer.mt6877 \
+    gralloc.mt6877 
+
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/seccomp/android.hardware.media.c2@1.2-extended-seccomp-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy \
-    $(LOCAL_PATH)/configs/seccomp/android.hardware.media.c2@1.2-mediatek-seccomp-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy \
-    $(LOCAL_PATH)/configs/seccomp/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy \
-    $(LOCAL_PATH)/configs/seccomp/mediaextractor_sec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor_sec.policy \
-    $(LOCAL_PATH)/configs/seccomp/mediaswcodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaswcodec.policy \
-    $(LOCAL_PATH)/configs/seccomp/samsung.software.media.c2-base-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/samsung.software.media.c2-base-policy \
-    $(LOCAL_PATH)/configs/seccomp/samsung.software.media.c2-ext-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/samsung.software.media.c2-ext-policy
+    $(LOCAL_PATH)/configs/display/cust_color.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cust_color.xml \
+    $(LOCAL_PATH)/configs/display/pq_flag.xml:$(TARGET_COPY_OUT_VENDOR)/etc/pq_flag.xml \
+    $(LOCAL_PATH)/configs/display/displayconfig/display_id_4627039422300187648.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4627039422300187648.xml \
+    $(LOCAL_PATH)/configs/display/gralloc/cam.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/cam.xml \
+    $(LOCAL_PATH)/configs/display/gralloc/dpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/dpu.xml \
+    $(LOCAL_PATH)/configs/display/gralloc/dpu_aeu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/dpu_aeu.xml \
+    $(LOCAL_PATH)/configs/display/gralloc/gpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/gpu.xml \
+    $(LOCAL_PATH)/configs/display/gralloc/vpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/vpu.xml
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm-service.clearkey \
+    com.google.android.widevine.nonupdatable
+
+# Dumpstate
+PRODUCT_PACKAGES += \
+    android.hardware.dumpstate-service
+
+# GNSS
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/gnss/MNL_Config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/MNL_Config.xml \
+    $(LOCAL_PATH)/configs/gnss/agps_profiles_conf2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/agps_profiles_conf2.xml
+    
+# IMS
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    ims_ext_common.xml \
+    volte_clientapi_ua \
+    volte_rcs_ua \
+    rcs_volte_stack    
 
 # Media
+PRODUCT_PACKAGES += \
+    android.hardware.media.c2-mediatek \
+    android.hardware.media.c2-mediatek-64b \
+    android.hardware.media.omx@1.0-service \
+    samsung.software.media.c2@1.0-service \
+    libcodec2_soft_common \
+    libstagefright_softomx \
+    media_codecs.xml \
+    media_codecs_performance.xml \
+    media_profiles_V1_0.xml
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     $(LOCAL_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
@@ -376,45 +250,61 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/dax3_media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dax3_media_codecs_dolby_audio.xml \
     $(LOCAL_PATH)/configs/media/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
 
+# MediaTek HALs
+PRODUCT_PACKAGES += \
+    gatekeeper.mt6877 \
+    lights.mt6877 \
+    power.mt6877 \
+    sensors.mt6877 \
+    android.hardware.gatekeeper@1.0-service \
+    android.hardware.lights-service.samsung \
+    android.hardware.power-service.mediatek \
+    android.hardware.sensors-service.multihal
+
+# Misc
+PRODUCT_PACKAGES += \
+    macloader \
+    mfgloader \
+    secaudiohalaidl \
+    tetheroffloadservice \
+    vendor.mediatek.hardware.aee@1.1-service \
+    vendor.mediatek.hardware.gpuserv-service \
+    vendor.mediatek.hardware.mmagent-service \
+    vendor.mediatek.hardware.mmlpq@V1-service \
+    vendor.mediatek.hardware.nvram-service \
+    vendor.mediatek.hardware.nwk_opt@1.0-service \
+    vendor.samsung.hardware.hyper-service \
+    vendor.samsung.hardware.snap-service \
+    vendor.samsung.hardware.sysinput-service \
+    vendor.samsung.hardware.tlc.hdm@1.1-service \
+    vendor.samsung.hardware.tlc.iccc-service \
+    vendor.samsung.hardware.tlc.kg-service \
+    vendor.samsung.hardware.tlc.mpos_tui@1.0-service \
+    vendor.samsung.hardware.tlc.payment@1.0-service
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/misc/floating_feature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/floating_feature.xml \
+    $(LOCAL_PATH)/configs/misc/hqm_device.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hqm_device.xml \
+    $(LOCAL_PATH)/configs/misc/power_app_cfg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/power_app_cfg.xml \
+    $(LOCAL_PATH)/configs/misc/powercontable.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powercontable.xml \
+    $(LOCAL_PATH)/configs/misc/powerscntbl.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerscntbl.xml \
+    $(LOCAL_PATH)/configs/misc/vramdiskd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vramdiskd.xml
+
+# Network stack overlays
+PRODUCT_PACKAGES += \
+    NetworkStackResOverlay \
+    TetheringResOverlay
+
 # NFC
+PRODUCT_PACKAGES += \
+    android.hardware.nfc-service.samsung \
+    com.android.nfc_extras \
+    NfcNci \
+    Tag
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-sec-hal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-hal.conf \
     $(LOCAL_PATH)/configs/nfc/libnfc-sec.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec.conf
-
-
-# Display
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/display/cust_color.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cust_color.xml \
-    $(LOCAL_PATH)/configs/display/pq_flag.xml:$(TARGET_COPY_OUT_VENDOR)/etc/pq_flag.xml \
-    $(LOCAL_PATH)/configs/display/displayconfig/display_id_4627039422300187648.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4627039422300187648.xml \
-    $(LOCAL_PATH)/configs/display/gralloc/cam.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/cam.xml \
-    $(LOCAL_PATH)/configs/display/gralloc/dpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/dpu.xml \
-    $(LOCAL_PATH)/configs/display/gralloc/dpu_aeu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/dpu_aeu.xml \
-    $(LOCAL_PATH)/configs/display/gralloc/gpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/gpu.xml \
-    $(LOCAL_PATH)/configs/display/gralloc/vpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/vpu.xml
-
-# GNSS
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/gnss/MNL_Config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/MNL_Config.xml \
-    $(LOCAL_PATH)/configs/gnss/agps_profiles_conf2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/agps_profiles_conf2.xml
-
-# WIFI
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
-    $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
-    $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
-    $(LOCAL_PATH)/configs/wifi/indoorchannel.info:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/indoorchannel.info
-
-# Sensors
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
-
-# Thermal
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal/thermal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/thermal.conf \
-    $(LOCAL_PATH)/configs/thermal/thermal.off.conf:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/thermal.off.conf \
-    $(LOCAL_PATH)/configs/thermal/.ht120.mtc:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/.ht120.mtc \
-    $(LOCAL_PATH)/configs/thermal/.thermal_policy_08:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/.thermal_policy_08
 
 # RIL
 PRODUCT_COPY_FILES += \
@@ -437,21 +327,110 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/RIL/virtual-spn-conf-by-efspn.xml:$(TARGET_COPY_OUT_VENDOR)/etc/virtual-spn-conf-by-efspn.xml \
     $(LOCAL_PATH)/configs/RIL/virtual-spn-conf-by-imsi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/virtual-spn-conf-by-imsi.xml
 
-# Misc
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/misc/floating_feature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/floating_feature.xml \
-    $(LOCAL_PATH)/configs/misc/hqm_device.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hqm_device.xml \
-    $(LOCAL_PATH)/configs/misc/power_app_cfg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/power_app_cfg.xml \
-    $(LOCAL_PATH)/configs/misc/powercontable.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powercontable.xml \
-    $(LOCAL_PATH)/configs/misc/powerscntbl.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerscntbl.xml \
-    $(LOCAL_PATH)/configs/misc/vramdiskd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vramdiskd.xml
+# Samsung-specific HALs
+PRODUCT_PACKAGES += \
+    vendor.samsung.hardware.camera.provider-service_64 \
+    vendor.samsung.hardware.gnss-service \
+    vendor.samsung.hardware.health-service \
+    vendor.samsung.hardware.thermal-service \
+    vendor.samsung.hardware.vibrator-service
 
-# odm
-ODM_MANIFEST_SKUS := dsds qsqs ss tsts
-ODM_MANIFEST_DSDS_FILES := $(LOCAL_PATH)/odm/manifest_dsds.xml
-ODM_MANIFEST_QSQS_FILES := $(LOCAL_PATH)/odm/manifest_qsqs.xml
-ODM_MANIFEST_SS_FILES := $(LOCAL_PATH)/odm/manifest_ss.xml
-ODM_MANIFEST_TSTS_FILES := $(LOCAL_PATH)/odm/manifest_tsts.xml
+
+# Seccomp
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/seccomp/android.hardware.media.c2@1.2-extended-seccomp-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy \
+    $(LOCAL_PATH)/configs/seccomp/android.hardware.media.c2@1.2-mediatek-seccomp-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy \
+    $(LOCAL_PATH)/configs/seccomp/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy \
+    $(LOCAL_PATH)/configs/seccomp/mediaextractor_sec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor_sec.policy \
+    $(LOCAL_PATH)/configs/seccomp/mediaswcodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaswcodec.policy \
+    $(LOCAL_PATH)/configs/seccomp/samsung.software.media.c2-base-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/samsung.software.media.c2-base-policy \
+    $(LOCAL_PATH)/configs/seccomp/samsung.software.media.c2-ext-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/samsung.software.media.c2-ext-policy
+
+# Security / KeyMint
+PRODUCT_PACKAGES += \
+    android.hardware.security.keymint-service \
+    vendor.samsung.hardware.security.drk@2.0-service \
+    vendor.samsung.hardware.security.engmode@1.0-service \
+    vendor.samsung.hardware.security.fkeymaster-service \
+    vendor.samsung.hardware.security.hdcp.wifidisplay-service \
+    vendor.samsung.hardware.security.proca@2.0-service \
+    vendor.samsung.hardware.security.skpm-service \
+    vendor.samsung.hardware.security.vaultkeeper@2.0-service \
+    vendor.samsung.hardware.security.widevine.keyprov-service \
+    vendor.samsung.hardware.security.wsm-service
+
+
+# Sensors
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+
+# Thermal
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermal/thermal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/thermal.conf \
+    $(LOCAL_PATH)/configs/thermal/thermal.off.conf:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/thermal.off.conf \
+    $(LOCAL_PATH)/configs/thermal/.ht120.mtc:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/.ht120.mtc \
+    $(LOCAL_PATH)/configs/thermal/.thermal_policy_08:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/.thermal_policy_08
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb-aidl-service.mediatekv1.0
+
+# Wi-Fi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi-service-lazy \
+    hostapd \
+    wpa_supplicant \
+    vendor.samsung.hardware.wifi-service
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
+    $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
+    $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
+    $(LOCAL_PATH)/configs/wifi/indoorchannel.info:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/indoorchannel.info
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.mt6877:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6877 \
+    $(LOCAL_PATH)/rootdir/etc/fstab.mt6877:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6877
+
+LOCAL_NOTICE_FILE := $(LOCAL_PATH)/NOTICE.xml.gz
+
+PRODUCT_COPY_FILES += \
+    device/samsung/a34x/rootdir/carrier/.keep:system/carrier/.keep
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
+    frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
+    frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
+    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
+    frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml \
+    frameworks/native/data/etc/android.hardware.sensor.compass.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.compass.xml \
+    frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
+    frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml \
+    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.biometrics.face.xml \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
+    frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
+    frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
+    frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml \
+    frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.gyroscope.xml \
+    frameworks/native/data/etc/android.hardware.sensor.light.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.light.xml \
+    frameworks/native/data/etc/android.hardware.sensor.proximity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.proximity.xml \
+    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
+    frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml \
+    frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml \
+    frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
+    frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
+    frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.uicc.xml \
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml
 
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \

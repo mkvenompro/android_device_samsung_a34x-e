@@ -78,6 +78,7 @@ PRODUCT_PACKAGES += \
     multi_init.rc \
     init.recovery.mt6877.rc \
     init.recovery.samsung.rc \
+    ueventd.rc
 
 # Firmware
 PRODUCT_COPY_FILES += \

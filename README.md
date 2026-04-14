@@ -4,7 +4,7 @@
    mkdir lineage-23.2; cd lineage-23.2
 
 ## Sync lineage-23.2
-   repo init -u https://github.com/LineageOS/android.git -b lineage-23.2 --git-lfs; repo sync
+    repo init -u https://github.com/LineageOS/android.git -b lineage-23.2 --git-lfs; repo sync
  
 ## Clone
     git clone https://github.com/A34-PeaceZone/lineage_device_samsung_a34-e.git -b lineage-23.2-a device/samsung/a34x

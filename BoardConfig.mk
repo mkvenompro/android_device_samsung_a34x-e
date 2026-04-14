@@ -122,14 +122,14 @@ TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 TARGET_COPY_OUT_ODM_DLKM := odm_dlkm
 
 # Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
-TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
-TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
-TARGET_SYSTEM_DLKM_PROP += $(DEVICE_PATH)/system_dlkm.prop
-TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
-TARGET_ODM_DLKM_PROP += $(DEVICE_PATH)/odm_dlkm.prop
-TARGET_VENDOR_DLKM_PROP += $(DEVICE_PATH)/vendor_dlkm.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/etc/props/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/etc/props/vendor.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/etc/props/product.prop
+TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/etc/props/system_ext.prop
+TARGET_SYSTEM_DLKM_PROP += $(DEVICE_PATH)/etc/props/system_dlkm.prop
+TARGET_ODM_PROP += $(DEVICE_PATH)/etc/props/odm.prop
+TARGET_ODM_DLKM_PROP += $(DEVICE_PATH)/etc/props/odm_dlkm.prop
+TARGET_VENDOR_DLKM_PROP += $(DEVICE_PATH)/etc/props/vendor_dlkm.prop
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6877
@@ -210,20 +210,20 @@ BOARD_SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
     hardware/samsung/sepolicy/mtk \
     device/samsung/a34x/sepolicy/vendor
 
-TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/etc/config.fs
 
 # VINTF
-DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/etc/vintf/manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     hardware/samsung/vintf/samsung_framework_compatibility_matrix.xml \
     hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml
 
 # odm
 ODM_MANIFEST_SKUS := dsds qsqs ss tsts
-ODM_MANIFEST_DSDS_FILES := $(DEVICE_PATH)/odm/manifest_dsds.xml
-ODM_MANIFEST_QSQS_FILES := $(DEVICE_PATH)/odm/manifest_qsqs.xml
-ODM_MANIFEST_SS_FILES := $(DEVICE_PATH)/odm/manifest_ss.xml
-ODM_MANIFEST_TSTS_FILES := $(DEVICE_PATH)/odm/manifest_tsts.xml
+ODM_MANIFEST_DSDS_FILES := $(DEVICE_PATH)/etc/vintf/odm/manifest_dsds.xml
+ODM_MANIFEST_QSQS_FILES := $(DEVICE_PATH)/etc/vintf/odm/manifest_qsqs.xml
+ODM_MANIFEST_SS_FILES := $(DEVICE_PATH)/etc/vintf/odm/manifest_ss.xml
+ODM_MANIFEST_TSTS_FILES := $(DEVICE_PATH)/etc/vintf/odm/manifest_tsts.xml
 
 # Modules
 BOARD_RECOVERY_KERNEL_MODULES += $(wildcard $(DEVICE_PATH)/rootdir/modules/recovery/*.ko)

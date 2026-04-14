@@ -1,7 +1,7 @@
 # Android device tree for samsung SM-A346E (a34x)
 
 ## Create the directory
-   mkdir lineage-23.2; cd lineage-23.2
+    mkdir lineage-23.2; cd lineage-23.2
 
 ## Sync lineage-23.2
     repo init -u https://github.com/LineageOS/android.git -b lineage-23.2 --git-lfs; repo sync

@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.samsung.a34x.overlay.lineage"
+    android:versionCode="1"
+    android:versionName="1.0">
+    <overlay
+        android:targetPackage="android"
+        android:isStatic="true"
+        android:priority="2"/>
+    <application
+        android:hasCode="false"
+        android:label="A34x Lineage Overlay"/>
+</manifest>

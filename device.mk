@@ -21,7 +21,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     a34xFrameworkOverlay \
     a34xTelephonyOverlay \
-    a34xSettingsOverlay
+    a34xSettingsOverlay \
+    a34xLineageOverlay
 
 # fastbootd
 PRODUCT_PACKAGES += \

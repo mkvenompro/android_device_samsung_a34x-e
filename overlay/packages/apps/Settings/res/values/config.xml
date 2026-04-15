@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Show fingerprint settings -->
+    <bool name="config_show_phone_info_settings">true</bool>
+
+    <!-- Show high refresh rate toggle -->
+    <bool name="config_show_smooth_display">true</bool>
+</resources>

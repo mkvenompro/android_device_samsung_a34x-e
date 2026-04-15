@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Trust interface: show power-off fingerprint -->
+    <string name="config_fingerprintSensorLocation" translatable="false">under-display</string>
+
+    <!-- Live display / color calibration -->
+    <bool name="config_enableLiveDisplay">true</bool>
+
+    <!-- Charging LEDs (A34 has no notification LED) -->
+    <bool name="config_intrusiveBatteryLed">false</bool>
+    <bool name="config_multiColorBatteryLed">false</bool>
+    <bool name="config_ledCanPulse">false</bool>
+
+    <!-- Buttons: no hardware keys -->
+    <integer name="config_deviceHardwareKeys">0</integer>
+</resources>

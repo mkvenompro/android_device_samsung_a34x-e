@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- VoLTE / IMS -->
+    <bool name="config_device_volte_available">true</bool>
+    <bool name="config_device_vt_available">true</bool>
+    <bool name="config_device_wfc_ims_available">true</bool>
+    <bool name="config_device_wfc_ims_editable">true</bool>
+    <bool name="config_carrier_volte_tty_supported">true</bool>
+
+    <!-- VoWiFi -->
+    <bool name="config_wifi_calling_available">true</bool>
+
+    <!-- Data roaming -->
+    <bool name="config_defaultDataRoamingEnabled">false</bool>
+
+    <!-- Dual SIM active data switching -->
+    <bool name="config_switching_supported">true</bool>
+</resources>

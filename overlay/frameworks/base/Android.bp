@@ -1,0 +1,8 @@
+// overlay/frameworks/base/Android.bp
+runtime_resource_overlay {
+    name: "a34xFrameworkOverlay",
+    manifest: "AndroidManifest.xml",
+    resource_dirs: ["res"],
+    sdk_version: "current",
+    product_specific: true,
+}

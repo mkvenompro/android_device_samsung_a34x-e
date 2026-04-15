@@ -13,7 +13,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 # Non_ab_device
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
-# Static overlays via package overlay path (simplest)
+# Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     device/samsung/a34x/overlay
 

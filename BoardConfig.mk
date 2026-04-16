@@ -204,7 +204,7 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 
 # Sepolicy
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
-BOARD_SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
+BOARD_SEPOLICY_DIRS += \
     hardware/mediatek/sepolicy/bsp/vendor \
     hardware/samsung/sepolicy/common \
     hardware/samsung/sepolicy/mtk \

@@ -445,3 +445,6 @@ PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \
     hardware/samsung/aidl \
     hardware/mediatek
+
+# Inherit the proprietary files
+$(call inherit-product, vendor/samsung/a34x/a34x-vendor.mk)

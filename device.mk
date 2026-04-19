@@ -350,7 +350,6 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.thermal-service \
     vendor.samsung.hardware.vibrator-service
 
-
 # Seccomp
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/android.hardware.media.c2@1.2-extended-seccomp-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy \
@@ -396,6 +395,8 @@ PRODUCT_PACKAGES += \
     hostapd \
     wpa_supplicant \
     vendor.samsung.hardware.wifi-service
+
+PRODUCT_PACKAGES += libwifi-hal-wrapper
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \

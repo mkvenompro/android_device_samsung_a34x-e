@@ -445,11 +445,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.
 
-PRODUCT_SOONG_NAMESPACES += hardware/mediatek
-PRODUCT_SOONG_NAMESPACES += hardware/samsung/aidl
-
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-    device/samsung/a34x/etc/vintf/compatibility_matrix.device.xml
+    device/samsung/a34x/etc/vintf/compatibility_matrix.device.xml \
+    hardware/samsung/vintf/samsung_framework_compatibility_matrix.xml \
+    hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/a34x/a34x-vendor.mk)

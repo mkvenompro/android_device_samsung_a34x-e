@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compatibility-matrix version="2.0" type="device" level="6">
+
+    <!-- Samsung proprietary AIDL HALs -->
+    <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.audio</name>
+        <version>1</version>
+        <interface><name>ISecAudioHal</name><instance>default</instance></interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.authfw</name>
+        <version>1</version>
+        <interface><name>ISehAuthenticationFramework</name><instance>default</instance></interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.bluetooth</name>
+        <version>1</version>
+        <interface><name>ISehBluetooth</name><instance>default</instance></interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.gnss</name>
+        <version>1</version>
+        <interface><name>ISehGnss</name><instance>default</instance></interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.hyper</name>
+        <version>2</version>
+        <interface><name>ISehHyPer</name><instance>default</instance></interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.security.hdcp.wifidisplay</name>
+        <version>2</version>
+        <interface><name>ISehHdcp</name><instance>default</instance></interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.security.skpm</name>
+        <version>1</version>
+        <interface><name>ISehSkpm</name><instance>default</instance></interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.security.widevine.keyprov</name>
+        <version>1</version>
+        <interface><name>ISehWidevineKeyProv</name><instance>default</instance></interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.security.wsm.service</name>
+        <version>1</version>
+        <interface><name>ISehWsm</name><instance>default</instance></interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.snap</name>
+        <version>3</version>
+        <interface><name>ISehSnap</name><instance>default</instance></interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.sysinput</name>
+        <version>2</version>
+        <interface><name>ISehSysInputDev</name><instance>default</instance></interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.tlc.iccc</name>
+        <version>3</version>
+        <interface><name>ISehIccc</name><instance>default</instance></interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.tlc.kg</name>
+        <version>2</version>
+        <interface><name>ISehKg</name><instance>default</instance></interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.wifi</name>
+        <version>1</version>
+        <interface><name>ISehWifi</name><instance>default</instance></interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.wifi.nan</name>
+        <version>1</version>
+        <interface><name>IWifiVendorNan</name><instance>default</instance></interface>
+    </hal>
+
+    <!-- Samsung proprietary HIDL HALs -->
+    <hal format="hidl" optional="true">
+        <name>vendor.samsung.hardware.security.engmode</name>
+        <version>1.0</version>
+        <interface><name>ISehEngmode</name><instance>default</instance></interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.samsung.hardware.tlc.hdm</name>
+        <version>1.1</version>
+        <interface><name>ISehHdm</name><instance>default</instance></interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.samsung.hardware.tlc.mpos_tui</name>
+        <version>1.0</version>
+        <interface><name>ISehMposTui</name><instance>default</instance></interface>
+    </hal>
+
+</compatibility-matrix>

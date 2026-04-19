@@ -90,8 +90,4 @@ l
         <transport>hwbinder</transport>
         <fqname>@1.0::ISehTlcPayment/default</fqname>
     </hal>
-    <sepolicy>
-        <kernel-sepolicy-version>30</kernel-sepolicy-version>
-        <version>202404.0</version>
-    </sepolicy>
 </manifest>

@@ -218,8 +218,6 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/etc/config.fs
 
 # VINTF
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/etc/vintf/manifest.xml
-BOARD_SEPOLICY_VERS := 202504.0
-
 # odm
 ODM_MANIFEST_SKUS := dsds qsqs ss tsts
 ODM_MANIFEST_DSDS_FILES := $(DEVICE_PATH)/etc/vintf/odm/manifest_dsds.xml

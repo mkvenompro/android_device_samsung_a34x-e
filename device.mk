@@ -449,7 +449,7 @@ PRODUCT_SOONG_NAMESPACES += hardware/mediatek
 PRODUCT_SOONG_NAMESPACES += hardware/samsung/aidl
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-    device/samsung/a34x/vintf/compatibility_matrix.device.xml
+    device/samsung/a34x/etc/vintf/compatibility_matrix.device.xml
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/a34x/a34x-vendor.mk)

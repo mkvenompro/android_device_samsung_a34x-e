@@ -95,6 +95,7 @@
         <interface><name>ISehMposTui</name><instance>default</instance></interface>
     </hal>
     <sepolicy>
+        <kernel-sepolicy-version>30</kernel-sepolicy-version>
         <version>202404.0</version>
     </sepolicy>
 </compatibility-matrix>

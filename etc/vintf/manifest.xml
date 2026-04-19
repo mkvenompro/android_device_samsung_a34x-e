@@ -8,10 +8,7 @@
         <name>android.hardware.gnss</name>
         <fqname>IGnss/default</fqname>
     </hal>
-    <hal format="aidl">
-        <name>android.hardware.security.secureclock</name>
-        <fqname>ISecureClock/default</fqname>
-    </hal>
+l
     <hal format="aidl">
         <name>android.hardware.soundtrigger3</name>
         <fqname>ISoundTriggerHw/default</fqname>

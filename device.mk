@@ -14,7 +14,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
 # mediatek
-$(call inherit-product, hardware/mediatek/aidl/Android.mk)
+#$(call inherit-product, hardware/mediatek/aidl/Android.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \

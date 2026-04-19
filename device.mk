@@ -448,7 +448,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += hardware/mediatek
 PRODUCT_SOONG_NAMESPACES += hardware/samsung/aidl
 
-PRODUCT_PACKAGES_EX := libwifi-hal
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    device/samsung/a34x/vintf/compatibility_matrix.device.xml
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/a34x/a34x-vendor.mk)

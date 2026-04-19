@@ -13,6 +13,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 # Non_ab_device
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
+# mediatek
+$(call inherit-product, hardware/mediatek/aidl/Android.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     device/samsung/a34x/overlay

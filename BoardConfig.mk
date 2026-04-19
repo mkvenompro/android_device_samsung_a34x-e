@@ -221,6 +221,7 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/etc/vintf/manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     hardware/samsung/vintf/samsung_framework_compatibility_matrix.xml \
     hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml
+BOARD_SEPOLICY_VERS := 202404.0
 
 # odm
 ODM_MANIFEST_SKUS := dsds qsqs ss tsts

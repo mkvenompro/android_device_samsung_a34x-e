@@ -5,6 +5,9 @@
 #
 PRODUCT_ENFORCE_VINTF_MANIFEST := false
 
+# Exclude debugfs directories from OTA
+TARGET_EXCLUDES_DEBUGFS := true
+
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 

@@ -238,3 +238,4 @@ BOARD_RECOVERY_KERNEL_MODULES += $(wildcard $(DEVICE_PATH)/rootdir/modules/recov
 BOARD_VENDOR_KERNEL_MODULES += $(wildcard $(DEVICE_PATH)/rootdir/modules/vendor_dlkm/*.ko)
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES += $(wildcard $(DEVICE_PATH)/rootdir/modules/vendor_boot/*.ko)
 BOARD_SYSTEM_DLKM_KERNEL_MODULES += $(wildcard $(DEVICE_PATH)/rootdir/modules/system_dlkm/*.ko)
+BOARD_RECOVERY_KERNEL_MODULES_LOAD := $(DEVICE_PATH)/rootdir/modules/recovery/modules.load.recovery

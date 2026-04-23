@@ -242,3 +242,6 @@ BOARD_RECOVERY_KERNEL_MODULES_LOAD := $(shell cat $(DEVICE_PATH)/rootdir/modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(shell cat $(DEVICE_PATH)/rootdir/modules/vendor_dlkm/modules.load)
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(shell cat $(DEVICE_PATH)/rootdir/modules/vendor_boot/modules.load.recovery)
 BOARD_SYSTEM_DLKM_KERNEL_MODULES_LOAD := $(shell cat $(DEVICE_PATH)/rootdir/modules/system_dlkm/modules.load)
+
+# Maintainer
+PRODUCT_MAINTAINER := SavedByLight

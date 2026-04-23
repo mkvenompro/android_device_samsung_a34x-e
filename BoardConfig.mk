@@ -89,6 +89,7 @@ BOARD_ROOT_EXTRA_FOLDERS := \
     spu \
     system_dlkm \
     carrier
+BOARD_ROOT_EXTRA_SYMLINKS := /sys/kernel/debug:d
 BOARD_SUPPRESS_SECURE_ERASE := true
 
 # Partitions

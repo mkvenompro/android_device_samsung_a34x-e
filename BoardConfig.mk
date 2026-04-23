@@ -63,6 +63,7 @@ TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilts/dtb.img
 BOARD_PREBUILT_RECOVERY_DTB := $(DEVICE_PATH)/prebuilts/recovery_dtb.img
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
 BOARD_PREBUILT_RECOVERY_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/recovery_dtbo.img
+BOARD_PREBUILT_INIT_BOOTIMAGE := $(DEVICE_PATH)/prebuilts/init_boot.img
 BOARD_MKBOOTIMG_ARGS := \
     --ramdisk_offset=0x11088000 \
     --second_offset=0xbff88000 \

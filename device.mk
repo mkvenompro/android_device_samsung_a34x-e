@@ -377,7 +377,6 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.security.widevine.keyprov-service \
     vendor.samsung.hardware.security.wsm-service
 
-
 # Sensors
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
@@ -399,8 +398,6 @@ PRODUCT_PACKAGES += \
     hostapd \
     wpa_supplicant \
     vendor.samsung.hardware.wifi-service
-
-PRODUCT_PACKAGES += libwifi-hal-wrapper
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \

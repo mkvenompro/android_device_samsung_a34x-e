@@ -73,7 +73,8 @@ BOARD_MKBOOTIMG_ARGS := \
     --second_offset=0xbff88000 \
     --dtb_offset=0x07c08000 \
     --os_version=15.0.0 \
-    --tags_offset=0x07c08000
+    --tags_offset=0x07c08000 \
+    --header_version=4
 BOARD_RECOVERY_MKBOOTIMG_ARGS := \
     --base=0x40078000 \
     --ramdisk_offset=0x11088000 \
@@ -81,7 +82,8 @@ BOARD_RECOVERY_MKBOOTIMG_ARGS := \
     --dtb_offset=0x07c08000 \
     --os_version=15.0.0 \
     --tags_offset=0x07c08000 \
-    --board=SRPVL02A010
+    --board=SRPVL02A010 \
+    --header_version=2
 BOARD_ROOT_EXTRA_FOLDERS := \
     efs \
     optics \

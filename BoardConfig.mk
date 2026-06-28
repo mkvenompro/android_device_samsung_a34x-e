@@ -67,8 +67,8 @@ BOARD_PREBUILT_RECOVERY_DTB := $(DEVICE_PATH)/prebuilts/recovery_dtb.img
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
 BOARD_PREBUILT_RECOVERY_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/recovery_dtbo.img
 BOARD_PREBUILT_INIT_BOOTIMAGE := $(DEVICE_PATH)/prebuilts/init_boot.img
-BOARD_MKBOOTIMG_ARGS := --base=0x40078000 --ramdisk_offset=0x11088000 --second_offset=0xbff88000 --dtb=\/prebuilts/dtb.img --dtb_offset=0x07c08000 --os_version=15.0.0 --tags_offset=0x07c08000 --header_version=4
-BOARD_RECOVERY_MKBOOTIMG_ARGS := --base=0x40078000 --ramdisk_offset=0x11088000 --second_offset=0xbff88000 --dtb=\/prebuilts/recovery_dtb.img --dtb_offset=0x07c08000 --os_version=15.0.0 --tags_offset=0x07c08000 --board=SRPVL02A010 --header_version=2
+BOARD_MKBOOTIMG_ARGS := --base=0x40078000 --ramdisk_offset=0x11088000 --second_offset=0xbff88000 --dtb=$(DEVICE_PATH)/prebuilts/dtb.img --dtb_offset=0x07c08000 --os_version=15.0.0 --tags_offset=0x07c08000 --header_version=4
+BOARD_RECOVERY_MKBOOTIMG_ARGS := --base=0x40078000 --ramdisk_offset=0x11088000 --second_offset=0xbff88000 --dtb=$(DEVICE_PATH)/prebuilts/recovery_dtb.img --dtb_offset=0x07c08000 --os_version=15.0.0 --tags_offset=0x07c08000 --board=SRPVL02A010 --header_version=2
 BOARD_ROOT_EXTRA_FOLDERS := \
     efs \
     optics \

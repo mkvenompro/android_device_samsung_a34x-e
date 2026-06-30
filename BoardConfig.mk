@@ -11,7 +11,6 @@ AB_OTA_UPDATER := false
 ALLOW_MISSING_DEPENDENCIES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_ENFORCE_VINTF_MANIFEST := true
-BUILD_BROKEN_USES_BUILD_DATE_TOOL := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -67,8 +66,25 @@ BOARD_PREBUILT_RECOVERY_DTB := $(DEVICE_PATH)/prebuilts/recovery_dtb.img
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
 BOARD_PREBUILT_RECOVERY_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/recovery_dtbo.img
 BOARD_PREBUILT_INIT_BOOTIMAGE := $(DEVICE_PATH)/prebuilts/init_boot.img
-BOARD_MKBOOTIMG_ARGS := --base=0x40078000 --ramdisk_offset=0x11088000 --second_offset=0xbff88000 --dtb=$(DEVICE_PATH)/prebuilts/dtb.img --dtb_offset=0x07c08000 --os_version=15.0.0 --tags_offset=0x07c08000 --header_version=4
-BOARD_RECOVERY_MKBOOTIMG_ARGS := --base=0x40078000 --ramdisk_offset=0x11088000 --second_offset=0xbff88000 --dtb=$(DEVICE_PATH)/prebuilts/recovery_dtb.img --dtb_offset=0x07c08000 --os_version=15.0.0 --tags_offset=0x07c08000 --board=SRPVL02A010 --header_version=2
+BOARD_MKBOOTIMG_ARGS := \
+    --base=0x40078000 \
+    --ramdisk_offset=0x11088000 \
+    --second_offset=0xbff88000 \
+    --dtb_offset=0x07c08000 \
+    --os_version=15.0.0 \
+    --tags_offset=0x07c08000 \
+    --header_version=4 \
+    --dtb=$(TARGET_PREBUILT_DTB)
+BOARD_RECOVERY_MKBOOTIMG_ARGS := \
+    --base=0x40078000 \
+    --ramdisk_offset=0x11088000 \
+    --second_offset=0xbff88000 \
+    --dtb_offset=0x07c08000 \
+    --os_version=15.0.0 \
+    --tags_offset=0x07c08000 \
+    --board=SRPVL02A010 \
+    --header_version=2 \
+    --dtb=$(BOARD_PREBUILT_RECOVERY_DTB)
 BOARD_ROOT_EXTRA_FOLDERS := \
     efs \
     optics \
@@ -142,6 +158,7 @@ VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 BOARD_AVB_BOOT_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_BOOT_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 BOARD_AVB_BOOT_ROLLBACK_INDEX := 0
@@ -195,7 +212,7 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Do NOT set BOARD_WLAN_DEVICE := MediaTek
-# Leave it unset so it falls to conditions_default  libwifi-hal-fallback
+# Leave it unset so it falls to conditions_default → libwifi-hal-fallback
 WIFI_MULTIPLE_VENDOR_HALS := true
 
 # Charger

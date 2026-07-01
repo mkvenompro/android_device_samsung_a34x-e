@@ -231,6 +231,7 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/etc/config.fs
 # VINTF
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/etc/vintf/manifest.xml
 DEVICE_MATRIX_FILE += $(DEVICE_PATH)/etc/vintf/compatibility_matrix.device.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/etc/vintf/framework_manifest.xml
 
 # odm
 ODM_MANIFEST_SKUS := dsds qsqs ss tsts

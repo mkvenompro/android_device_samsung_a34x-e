@@ -251,4 +251,4 @@ BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(shell cat $(DEVICE_PATH)/rootdir/m
 BOARD_SYSTEM_DLKM_KERNEL_MODULES_LOAD := $(shell cat $(DEVICE_PATH)/rootdir/modules/system_dlkm/modules.load)
 
 # Maintainer
-PRODUCT_MAINTAINER := SavedByLight
+PRODUCT_MAINTAINER := MkVenomPro

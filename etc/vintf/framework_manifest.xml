@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <compatibility-matrix version="2.0" type="framework" level="6">
-<sepolicy version="202504"/>
 
 <!-- Radio extra instances -->
 <hal format="aidl" optional="true">

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <compatibility-matrix version="2.0" type="framework" level="6">
+            <sepolicy>
+        <kernel-sepolicy-version>30</kernel-sepolicy-version>
         <sepolicy-version>202504</sepolicy-version>
+    </sepolicy>
 
 <!-- Radio extra instances -->
 <hal format="aidl" optional="true">
@@ -356,3 +359,4 @@
         <interface><name>ISehMposTui</name><instance>default</instance></interface>
     </hal>
 </compatibility-matrix>
+

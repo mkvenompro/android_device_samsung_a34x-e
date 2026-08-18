@@ -228,6 +228,9 @@ BOARD_SEPOLICY_DIRS += \
 
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/etc/config.fs
 
+# DTB in boot image
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+
 # VINTF
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/etc/vintf/manifest.xml
 DEVICE_MATRIX_FILE += $(DEVICE_PATH)/etc/vintf/compatibility_matrix.device.xml

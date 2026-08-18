@@ -1,4 +1,4 @@
-<compatibility-matrix version="8.0" type="framework">
+<compatibility-matrix version="8.0" type="device">
     <sepolicy>
         <kernel-sepolicy-version>30</kernel-sepolicy-version>
         <sepolicy-version>29.0</sepolicy-version>

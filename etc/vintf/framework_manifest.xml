@@ -87,8 +87,10 @@
         <name>vendor.mediatek.hardware.log</name>
         <version>1</version>
         <interface><name>ILog</name>
-            <instance>ATMWiFiHidlServer</instance><instance>ConnsysFWHidlServer</instance>
-            <instance>LoggerHidlServer</instance><instance>MobileLogHidlServer</instance>
+            <instance>ATMWiFiHidlServer</instance>
+            <instance>ConnsysFWHidlServer</instance>
+            <instance>LoggerHidlServer</instance>
+            <instance>MobileLogHidlServer</instance>
             <instance>ModemLogHidlServer</instance>
         </interface>
     </hal>

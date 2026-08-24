@@ -289,7 +289,7 @@
     <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.radio.bridge</name>
         <transport>hwbinder</transport>
-        <version>2</version>
+        <version>2.0</version>
         <interface><name>ISehBridge</name>
             <instance>slot1</instance><instance>slot2</instance>
         </interface>
@@ -297,7 +297,7 @@
     <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.radio.channel</name>
         <transport>hwbinder</transport>
-        <version>2</version>
+        <version>2.0</version>
         <interface><name>ISehChannel</name>
             <instance>epdgd</instance><instance>epdgd2</instance>
             <instance>imsd</instance><instance>imsd2</instance>
@@ -306,7 +306,7 @@
     <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.radio</name>
         <transport>hwbinder</transport>
-        <version>2</version>
+        <version>2.0</version>
         <interface><name>ISehRadio</name>
             <instance>slot1</instance><instance>slot2</instance>
         </interface>
@@ -314,37 +314,37 @@
     <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.security.drk</name>
         <transport>hwbinder</transport>
-        <version>2</version>
+        <version>2.0</version>
         <interface><name>ISehDrk</name><instance>default</instance></interface>
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.security.engmode</name>
         <transport>hwbinder</transport>
-        <version>1</version>
+        <version>1.0</version>
         <interface><name>ISehEngmode</name><instance>default</instance></interface>
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.security.vaultkeeper</name>
         <transport>hwbinder</transport>
-        <version>2</version>
+        <version>2.0</version>
         <interface><name>ISehVaultKeeper</name><instance>default</instance></interface>
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.tlc.hdm</name>
         <transport>hwbinder</transport>
-        <version>1</version>
+        <version>1.0</version>
         <interface><name>ISehHdm</name><instance>default</instance></interface>
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.tlc.mpos_tui</name>
         <transport>hwbinder</transport>
-        <version>1</version>
+        <version>1.0</version>
         <interface><name>ISehMposTui</name><instance>default</instance></interface>
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.tlc.payment</name>
         <transport>hwbinder</transport>
-        <version>1</version>
+        <version>1.0</version>
         <interface><name>ISehTlcPayment</name><instance>default</instance></interface>
     </hal>
 

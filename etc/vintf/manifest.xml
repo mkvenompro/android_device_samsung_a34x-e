@@ -87,9 +87,9 @@
     <hal format="hidl">
         <name>vendor.samsung.hardware.tlc.payment</name>
         <transport>hwbinder</transport>
-        <fqname>@1.0::ISehTlcPayment/default</fqname>
-    </hal>
-    <sepolicy>
-        <version>202404</version>
-    </sepolicy>
-</manifest>
+<fqname>@1.0::ISehTlcPayment/default</fqname>
+     </hal>
+     <sepolicy>
+         <version>202504</version>
+     </sepolicy>
+ </manifest>

@@ -221,6 +221,7 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 
 # Sepolicy
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
+BOARD_SEPOLICY_VERS := 202504
 BOARD_SEPOLICY_DIRS += \
     hardware/mediatek/sepolicy/bsp/vendor \
     hardware/samsung/sepolicy/common \
@@ -236,11 +237,7 @@ DEVICE_MATRIX_FILE += $(DEVICE_PATH)/etc/vintf/compatibility_matrix.device.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/etc/vintf/framework_manifest.xml
 
 # odm
-ODM_MANIFEST_SKUS := dsds qsqs ss tsts
-ODM_MANIFEST_DSDS_FILES := $(DEVICE_PATH)/etc/vintf/odm/manifest_dsds.xml
-ODM_MANIFEST_QSQS_FILES := $(DEVICE_PATH)/etc/vintf/odm/manifest_qsqs.xml
-ODM_MANIFEST_SS_FILES := $(DEVICE_PATH)/etc/vintf/odm/manifest_ss.xml
-ODM_MANIFEST_TSTS_FILES := $(DEVICE_PATH)/etc/vintf/odm/manifest_tsts.xml
+# ODM manifests removed - vendor radio interfaces are provided by AOSP RIL
 
 # Modules
 BOARD_RECOVERY_KERNEL_MODULES += $(wildcard $(DEVICE_PATH)/rootdir/modules/recovery/*.ko)
